@@ -322,7 +322,7 @@ footer{
 }
 
 header.navbar{
-    margin-top: 0px;
+    
     transition: opacity 0.5s, visibility 0.5s;
     
     h1{
