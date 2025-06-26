@@ -2,7 +2,10 @@ const header = document.getElementById('cabecalho')
 const form = document.getElementById('form-header')
 
 function mudaCabecalho() {
-    window.addEventListener('scroll', function(){
+        
+
+        window.addEventListener('scroll', function(){
+            let largura = window.screen.availWidth
         if(window.scrollY > 0)
         {
             header.style.opacity = '0'
@@ -13,13 +16,22 @@ function mudaCabecalho() {
         }
         }
 
-        if(window.scrollY >= 780)
+        if(window.scrollY >= 780 && largura > 991)
         {
             header.style.backgroundColor = '#2C3E50'
             form.style.backgroundColor = '#2c3e50ee'
             header.style.opacity = ''
             header.style.marginTop = '74px'
         }
+
+        else if(window.scrollY >= 780 && largura < 991)
+        {
+            header.style.backgroundColor = '#2C3E50'
+            form.style.backgroundColor = '#2c3e50ee'
+            header.style.opacity = ''
+            header.style.marginTop = '0px'
+        }
+
         else{
             {
             header.style.backgroundColor = ''
@@ -27,7 +39,10 @@ function mudaCabecalho() {
             header.style.marginTop = ''
         }
         }
+        
     })
+
+    
 }
 
 mudaCabecalho()
