@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViajAi</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecalho" class="navbar navbar-expand-lg sticky-top py-2 shadow">
+        <div class="container">
+            <h1 class="navbar-brand m-0 fw-bold cursive-title text-shadow fs-4">Viaj<span class="text-colored">Ai</span></h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="offcanvas offcanvas-end" id="menu-nav">
+                <ul class="nav nav-underline nav-underline d-block d-lg-flex mt-2 px-3 mt-lg-0 px-lg-0 justify-content-end">
+                    <li class="nav-item fw-bold">
+                        <a href="#initial-slide" class="nav-link active">
+                            <i class=""></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item fw-bold">
+                        <a href="#sobre" class="nav-link">
+                            <i class=""></i>
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#destinos" class="nav-link">
+                            <i class=""></i>
+                            Destinos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#duvidas" class="nav-link">
+                            <i class=""></i>
+                            Dúvidas
+                        </a>
+                    </li>
+                </ul>
+            
+            <form class="input-group rounded shadow " id="form-header">
+                        
+                               <div class="input-group col-md">
+                                 <div class="form-floating">
+                                    <input type="text" class="form-control" id="origem" placeholder="Origem">
+                                    <label for="origem">Origem</label>
+                                </div>
+                                
+                                <button class="btn btn-outline-secondary">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </button>
+                                
+                                <div class="form-floating" >
+                                    <input type="text" class="form-control" id="destino" placeholder="Destino">
+                                    <label for="destino">Destino</label>
+                                </div>
+                               </div>
+                                
+                                <div class="input-group col-md mx-0 my-2 mx-lg-2 my-lg-0">
+                                    <div class="form-floating ">
+                                    <input type="date" class="form-control " id="inicio" placeholder="inicio">
+                                    <label for="inicio" class="">Início</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="fim" >
+                                    <label for="fim">Fim</label>
+                                </div>
+                                </div>
+                            
+                                <div class="input-group col-md">
+                                    <div class="form-floating col-md">
+                                    <select class="form-select " id="select">
+                                        <option value="1" selected>1 Passageiro</option>
+                                        <option value="2">2 Passageiros</option>
+                                        <option value="3">3 Passageiros</option>
+                                        <option value="4">4 Passageiros</option>
+                                        <option value="5">5 Passageiros</option>
+                                        <option value="6">6 Passageiros</option>
+                                        <option value="7">7 Passageiros</option>
+                                        <option value="8">8 Passageiros</option>
+                                        <option value="9">9 Passageiros</option>
+                                    </select>
+                                    <label for="select">Passageiro(s)</label>
+                                    
+                                </div>
+
+                                <button type="submit" class="btn btn-cian">Buscar</button>
+                                </div>
+                    </form>
+                    </nav>
+        </div>
+    </header>
+<div data-bs-spy="scroll" data-bs-target="#menu-nav" data-bs-smooth-scroll="true">
+    <div class="carousel slide" id="initial-slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+                <div class="carousel-item vh-100 active">
+                    <img src="./images/slides/cristo.jpg" class="d-block w-100"  alt="">
+                    <div class="carousel-caption align-items-center">
+                        <h1 class=" mb-4 cursive-title text-shadow">Viaje com <span class="text-colored">Liberdade</span></h1>
+                        <p class="fs-5 ">Viajar é investir em memórias que o tempo não apaga.</p>
+                        <div class="box-btn mt-4">
+                            <a href="#destinos">
+                                <button type="button" class="btn btn-lg fst-italic btn-outline-light fw-bold mb-2 mb-md-0">
+                                    Destinos
+                                </button>
+                                </a>
+                                <a href="#duvidas">
+                                    <button type="button" class="btn btn-lg fst-italic btn-cian fw-bold">
+                                    Saiba Mais
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item vh-100">
+                    <img src="./images/slides/cristalina.jpg" class="d-block w-100"  alt="">
+                    <div class="carousel-caption align-items-center">
+                        <h1 class=" mb-4 cursive-title text-shadow">Viaje com <span class="text-colored">Liberdade</span></h1>
+                        <p class="fs-5">O mundo é grande demais para ficar em um só lugar.</p>
+                        <div class="box-btn mt-4">
+                            <a href="#destinos">
+                                <button type="button" class="btn btn-lg fst-italic btn-outline-light fw-bold mb-2 mb-md-0">
+                                    Destinos
+                                </button>
+                                </a>
+                                <a href="#duvidas">
+                                    <button type="button" class="btn btn-lg fst-italic btn-cian fw-bold">
+                                    Saiba Mais
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item vh-100">
+                    <img src="./images/slides/night.jpg" class="d-block w-100"  alt="">
+                    <div class="carousel-caption align-items-center">
+                        <h1 class=" mb-4 cursive-title text-shadow">Viaje com <span class="text-colored">Liberdade</span></h1>
+                        <p class="fs-5">Troque suas rotinas por roteiros e descubra o que te move.</p>
+                        <div class="box-btn mt-4">
+                            <a href="#destinos">
+                                <button type="button" class="btn btn-lg fst-italic btn-outline-light fw-bold mb-2 mb-md-0">
+                                    Destinos
+                                </button>
+                                </a>
+                                <a href="#duvidas">
+                                    <button type="button" class="btn btn-lg fst-italic btn-cian fw-bold">
+                                    Saiba Mais
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item vh-100">
+                    <img src="./images/slides/villag.jpg" class="d-block w-100"  alt="">
+                    <div class="carousel-caption align-items-center">
+                        <h1 class=" mb-4 cursive-title text-shadow">Viaje com <span class="text-colored">Liberdade</span></h1>
+                        <p class="fs-5">Colecione destinos, não desculpas.</p>
+                        <div class="box-btn mt-4">
+                            <a href="#destinos">
+                                <button type="button" class="btn btn-lg fst-italic btn-outline-light fw-bold mb-2 mb-md-0">
+                                    Destinos
+                                </button>
+                                </a>
+                                <a href="#duvidas">
+                                    <button type="button" class="btn btn-lg fst-italic btn-cian fw-bold">
+                                    Saiba Mais
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="carousel-indicators">
+            <button type="button" class="active" data-bs-target="#initial-slide" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#initial-slide" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#initial-slide" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#initial-slide" data-bs-slide-to="3"></button>
+        </div>
+        
+        <button type="button" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#initial-slide">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button type="button" class="carousel-control-next" data-bs-slide="next" data-bs-target="#initial-slide">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row ">
+                <h1 class="cursive-title text-center mb-4">Sobre <span class="text-shadow text-colored">Nós</span></h1>
+            </div>
+            <div class="row align-items-center">
+                    <div class="col-md-5 fs-5">
+                    <h3 class="mb-3 fst-italic">Mais que um site de viagens</h3>
+                    <p>
+                        <strong>Bem-vindo ao ViajAi</strong>, sua plataforma confiável para viagens descomplicadas e inesquecíveis!
+                    </p>
+                    <p>
+                        <strong>Fundado em 2004</strong>, nascemos da paixão por conectar pessoas aos seus destinos dos sonhos, com transparência, segurança e os melhores preços do mercado. Nossa missão é transformar a busca por passagens aéreas em uma experiência ágil, personalizada e sem estresse, porque acreditar que a jornada começa no momento em que você planeja sua aventura.
+                    </p>
+                    <p>
+                        <strong class="fst-italic">Somos mais que um site de viagens, somos seus parceiros de roteiro, então <span class="text-colored">ViajAi</span>!</strong> 
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <img src="./images/avião.png" class="d-block w-100">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" >
+        <div class="container ">
+            <div class="row text-center ">
+                <h1 class="cursive-title text-shadow">Deixa os <span class="text-colored">detalhes</span> com a gente
+                    <p class="fs-4 fw-bold mt-3">Viaje para <span class="text-colored text-shadow">relaxar</span>!</p>
+                </h1>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="destinos" class="py-5 border-bottom">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <h1 class="cursive-title">Escolha você o seu <span class="text-colored">Destino</span></h1>
+            </div>
+            <div class="row px-3">
+                <nav class="nav justify-content-center nav-tabs my-2 ">
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#praias" class=" nav-link active fw-bold" >Praias</button>
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#cidades" class=" nav-link fw-bold">Cidades</button>
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#maravilhas" class=" nav-link fw-bold">As Maravilhas</button>
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#natureza" class=" nav-link fw-bold" >Paisagens Naturais</button>
+                </nav>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="praias">
+                    <div class="row ">
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia1.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Sri lanka</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">5.860</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia2.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Malapasqua</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">9.000</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia3.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Sagres</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">7.200</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia4.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Maldivas</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">9.700</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia5.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Crimeia</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">6.500</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card h-100 border-0 rounded">
+                        <div class="card-img">
+                            <img src="./images/praias/praia6.jpg" class="d-block w-100 ">
+                        </div>
+                        <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Ko phi phi lee</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">6.720</span></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cidades">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/moscow.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Moscow</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">9.331</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/buildings.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Kuala Lumpur</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">7.000</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/cityscape-5543224_1920.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Xangai</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">8.000</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/night.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Hong Kong</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">7.820</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/seoul-3599499_1920.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Seul</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">7.600</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cidades/usa.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Manhattan</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">6.000</span></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="maravilhas">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/brazil.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Rio de Janeiro</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">435</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/eiffel-tower.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Paris</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">5.000</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/italy.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Itália</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">6.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/peru.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Peru</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">2.000</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/petra.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Petra</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">4.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/pyramid.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Chichen itza</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">2.600</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/maravilhas/taj-mahal.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Taj Mahal</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">8.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="natureza">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cabanas/cabana1.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Chile</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">2.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cabanas/cabana2.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Costa Rica</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">2.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cabanas/cabana3.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Alpes Suíços</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">4.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cabanas/cabana4.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Dolomitas</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">4.300</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-3">
+                        <div class="card h-100 border-0 rounded">
+                            <div class="card-img">
+                                <img src="./images/cabanas/cabana5.jpg" class="d-block w-100 ">
+                            </div>
+                            <div class="card-body ">
+                            <span class="card-text">PASSAGEM</span>
+                            <h4 class="card-title mt-1">Finlândia</h4>
+                            <p class="card-text">Saindo de São Paulo</p>
+                            <p class="card-text mini-box rounded">Ida e Volta</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-text">Preço</span>
+                            <p class="card-text">R$<span class="valor">5.500</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="duvidas" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h1 class="cursive-title">Dúvidas <span class="text-colored">Frequentes</span></h1>
+            </div>
+            <div class="accordion" id="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#duvida1" aria-expanded="true" aria-controls="duvida1">
+                            É seguro pagar no site? Como protegem meus dados?
+                        </button>
+                    </h2>
+                    <div id="duvida1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <ul class="ps-3 fw-bold">
+                                <li>
+                                    Pagamentos criptografados (não armazenamos dados do cartão)
+                                </li>
+                                <li>
+                                
+                                        Confirmação via e-mail/SMS para validar a compra.
+                                    
+                                </li>
+                                <li>
+                                
+                                        Seu pagamento é processado em ambiente seguro (PCI DSS). Aceitamos Pix, cartões e parcelamento em até 12x sem juros
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#duvida2" aria-expanded="true" aria-controls="duvida2">
+                            E se precisar cancelar ou alterar minha passagem?
+                        </button>
+                    </h2>
+                    <div id="duvida2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                        <div class="accordion-body fw-bold">
+                            <span>Na página de pagamento, selecione ‘Opções Flexíveis’ para ver voos com alteração gratuita. Todas as regras são exibidas antes da compra.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#duvida3" aria-expanded="true" aria-controls="duvida3">
+                            Como escolher o melhor horário de voo para evitar conexões apertadas ou escalas longas?
+                        </button>
+                    </h2>
+                    <div id="duvida3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                        <div class="accordion-body fw-bold">
+                            <span>Use nosso filtro ‘Conexões Rápidas’ para ver voos com tempo ideal de escala. Aeroportos movimentados como Miami (MIA) exigem mais tempo para imigração.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#duvida4" aria-expanded="true" aria-controls="duvida4">
+                            Por que nos escolher?
+                        </button>
+                    </h2>
+                    <div id="duvida4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                        <div class="accordion-body fw-bold">
+                            <ul class="ps-3 fw-bold">
+                                <li>
+                                    Comparação inteligente: Analisamos milhares de opções para garantir que você compre no melhor preço.
+                                </li>
+                                <li>
+                                
+                                        Confirmação via e-mail/SMS para validar a compra.
+                                    
+                                </li>
+                                <li>
+                                
+                                        Seu pagamento é processado em ambiente seguro (PCI DSS). Aceitamos Pix, cartões e parcelamento em até 12x sem juros
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container py-5 ">
+        <div class="row">
+            <div class="col-md-4 redes">
+                <h2 class="cursive-title mb-4">Nossas Redes</h2>
+                <p>
+                    Acompanhe nossas redes sociais e fique por dentro de tudo.
+                </p>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 contato">
+                <h2 class="cursive-title mb-4">Contato</h2>
+                <ul>
+                    <li>
+                        <p>
+                            <i class="bi bi-telephone"> </i>
+                            (12) 3456-7890
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="bi bi-whatsapp"> </i>
+                            (12) 34567-8900
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="bi bi-envelope-at"> </i>
+                            (12) 34567-8900
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="cursive-title mb-4">Novidades</h2>
+                <p>Receba novas promoções diretamente no seu e-mail!</p>
+
+                <form>
+                    <input type="email" class="form-control mb-2" placeholder="Digite seu E-mail">
+                    <button type="submit" class="btn btn-cian form-control">Inscreva-se</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <hr class="my-5">
+                <p>&copy; ViajAi - Todos os direitos reservados</p>
+                <p>Desenvolvido por <a href="https://github.com/SrHettich" target="_blank" class="fw-bold">@SrHettich</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
