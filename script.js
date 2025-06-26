@@ -16,7 +16,7 @@ function mudaCabecalho() {
         }
         }
 
-        if(window.scrollY >= 780 && largura > 991)
+        if(window.scrollY >= 760 && largura > 991)
         {
             header.style.backgroundColor = '#2C3E50'
             form.style.backgroundColor = '#2c3e50ee'
@@ -24,7 +24,7 @@ function mudaCabecalho() {
             header.style.marginTop = '74px'
         }
 
-        else if(window.scrollY >= 780 && largura < 991)
+        else if(window.scrollY >= 760 && largura < 991)
         {
             header.style.backgroundColor = '#2C3E50'
             form.style.backgroundColor = '#2c3e50ee'
@@ -37,6 +37,7 @@ function mudaCabecalho() {
             header.style.backgroundColor = ''
             form.style.backgroundColor = ''
             header.style.marginTop = ''
+            
         }
         }
         
