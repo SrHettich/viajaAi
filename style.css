@@ -9,6 +9,7 @@ body{
 header.navbar{
     margin-top: -58px;
     transition: opacity 0.5s, visibility 0.5s;
+    
 
     .navbar-brand:hover{
         color: #fff;
@@ -33,7 +34,10 @@ header.navbar{
     }
 }
 
-nav#menu-nav.offcanvas.offcanvas-end.show{
+
+
+
+nav#menu-nav.offcanvas.offcanvas-end{
     background-color: #2C3E50;
 }
 
@@ -86,6 +90,7 @@ nav#menu-nav.offcanvas.offcanvas-end.show{
 .carousel-item img{
     filter: brightness(75%);
 }
+
 
 #initial-slide .carousel-item .carousel-caption{
     top: 42%;
